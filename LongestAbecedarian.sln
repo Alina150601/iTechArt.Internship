@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestAbecedarian", "LongestAbecedarian\LongestAbecedarian.csproj", "{D251702B-D478-43B1-838C-2B68E82EEA7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SockPairs", "SockPairs\SockPairs.csproj", "{A5AF1E5A-357B-430B-AC5B-E6159577B77D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseAndNot", "ReverseAndNot\ReverseAndNot.csproj", "{FEF25E1F-4C47-435A-A5E3-EC6A0CD401A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidatePassword", "ValidatePassword\ValidatePassword.csproj", "{0A0D3733-B7D9-4D8F-9FDA-8834F08F62B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D251702B-D478-43B1-838C-2B68E82EEA7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D251702B-D478-43B1-838C-2B68E82EEA7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D251702B-D478-43B1-838C-2B68E82EEA7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D251702B-D478-43B1-838C-2B68E82EEA7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5AF1E5A-357B-430B-AC5B-E6159577B77D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5AF1E5A-357B-430B-AC5B-E6159577B77D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5AF1E5A-357B-430B-AC5B-E6159577B77D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5AF1E5A-357B-430B-AC5B-E6159577B77D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEF25E1F-4C47-435A-A5E3-EC6A0CD401A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEF25E1F-4C47-435A-A5E3-EC6A0CD401A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEF25E1F-4C47-435A-A5E3-EC6A0CD401A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEF25E1F-4C47-435A-A5E3-EC6A0CD401A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A0D3733-B7D9-4D8F-9FDA-8834F08F62B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A0D3733-B7D9-4D8F-9FDA-8834F08F62B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A0D3733-B7D9-4D8F-9FDA-8834F08F62B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A0D3733-B7D9-4D8F-9FDA-8834F08F62B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
