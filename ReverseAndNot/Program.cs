@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+
 //link: https://edabit.com/challenge/YGhgctqPsKQxQQCFS
 namespace ReverseAndNot
 {
@@ -11,7 +12,7 @@ namespace ReverseAndNot
             var i = 123;
             Console.WriteLine(ReverseAndNot(i));
         }
-        
+
         public static string ReverseAndNot(int i)
         {
             var u = i.ToString();
