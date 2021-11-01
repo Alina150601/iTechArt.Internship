@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+
 //link: https://edabit.com/challenge/etT7orqDDXJF2zGYM
 namespace ValidatePassword
 {
@@ -14,7 +15,6 @@ namespace ValidatePassword
         public static bool ValidatePassword(string password)
         {
             var hasNormalLength = password.Length >= 6 && password.Length <= 24;
-            var notMoreThanTwoRepears = true;
             var allowedSymbols = new List<char>
             {
                 '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+', '=', '_', '-',
@@ -30,6 +30,7 @@ namespace ValidatePassword
                     return false;
                 }
             }
+
             var isAllowed = password.All(x =>
                 char.IsLetterOrDigit(x) || allowedSymbols.Contains(x));
 
@@ -37,9 +38,8 @@ namespace ValidatePassword
                    password.Any(char.IsUpper) &&
                    password.Any(char.IsLower) &&
                    password.Any(char.IsDigit) &&
-                   password.All(x=>x!='è' )&&
-                   isAllowed; 
+                   password.All(x => x != 'è') &&
+                   isAllowed;
         }
     }
-
 }
