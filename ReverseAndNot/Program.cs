@@ -15,9 +15,9 @@ namespace ReverseAndNot
 
         public static string ReverseAndNot(int i)
         {
-            var u = i.ToString();
-            var l = new string(i.ToString().ToCharArray().Reverse().ToArray());
-            var newNumber = l + u;
+            var numberToString = i.ToString();
+            var numberToStringRevers = new string(i.ToString().ToCharArray().Reverse().ToArray());
+            var newNumber = numberToStringRevers + numberToString;
             return newNumber;
         }
     }
