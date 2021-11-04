@@ -2,17 +2,20 @@
 using System.Text.RegularExpressions;
 
 //link: https://edabit.com/challenge/JYEufqRvkusjr5R58
-public class Program
+namespace Bomb
 {
-    public static void Main(string[] args)
+    public class Program
     {
-        Console.WriteLine(Bomb("Hey, did you find the BoMb?"));
-    }
+        public static void Main(string[] args)
+        {
+            Console.WriteLine(Bomb("Hey, did you find the BoMb?"));
+        }
 
-    public static string Bomb(string txt)
-    {
-        Regex regex = new Regex(@"bomb", RegexOptions.IgnoreCase);
-        MatchCollection matches = regex.Matches(txt);
-        return matches.Count > 0 ? "Duck!!!" : "There is no bomb, relax.";
+        public static string Bomb(string txt)
+        {
+            Regex regex = new Regex(@"bomb", RegexOptions.IgnoreCase);
+            MatchCollection matches = regex.Matches(txt);
+            return matches.Count > 0 ? "Duck!!!" : "There is no bomb, relax.";
+        }
     }
 }
