@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
 //task: randomly to choose one record from file
-namespace randomFromFike
+namespace RandomFromFile
 {
     public static class Program
     {
@@ -13,7 +12,7 @@ namespace randomFromFike
             try
             {
                 //Pass the file path and file name to the StreamReader constructor
-                StreamReader sr = new StreamReader("/Users/malinka/iTechArt.Internship/randomFromFile/whoWashTheDish.txt");
+                StreamReader sr = new StreamReader("../../../whoWashTheDish.txt");
                 //Read the first line of text
                 var line = sr.ReadLine();
                 //Continue to read until you reach end of file

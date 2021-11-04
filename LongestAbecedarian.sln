@@ -38,7 +38,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Сompair", "Сompair\Сompa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tasks-3-whoWashTheDish", "tasks-3-whoWashTheDish", "{485F4827-9A2A-42D9-AE0C-64918DC0F248}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "randomFromFile", "randomFromFile\randomFromFile.csproj", "{A43A67D1-2CA9-4AF0-A596-8A04FF6E1A15}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomFromFile", "RandomFromFile\RandomFromFile.csproj", "{A43A67D1-2CA9-4AF0-A596-8A04FF6E1A15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
