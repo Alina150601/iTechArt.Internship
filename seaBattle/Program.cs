@@ -4,10 +4,14 @@
     {
         public static void Main(string[] args)
         {
+            PlayGround userPlayGround = new PlayGround();
+            userPlayGround.FillWithShips();
 
-            Sheep sheep = new Sheep(4);
-            PlayGround playGround = new PlayGround();
-            playGround.LocateShip(sheep);
+
+            PlayGround computerPlayGround = new PlayGround();
+            computerPlayGround.FillWithShips();
+
         }
     }
+}
 }

@@ -3,13 +3,14 @@ using System.Collections.Generic;
 
 namespace seaBattle
 {
-    public class Sheep
+    public class Ship
     {
         public int Length { get; set; }
 
         public List<Cell> Cells { get; set; }
 
-        public Sheep(int length)
+
+        public Ship(int length)
         {
             if (length <= 4 && length >= 1) Length = length;
             else throw new ArgumentException();
