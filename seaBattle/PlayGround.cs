@@ -39,6 +39,12 @@ namespace seaBattle
         }
 
 
+        public Cell TakeCell(int x, int y)
+        {
+            var single = Cells.Single(oneCell => oneCell.X == x && oneCell.Y == y);
+            return single;
+        }
+
         public void FillWithShips()
         {
             foreach (var ship in Ships)
@@ -46,6 +52,7 @@ namespace seaBattle
                 LocateShip(ship);
             }
         }
+
 
         private void LocateShip(Ship ship)
         {
@@ -55,7 +62,7 @@ namespace seaBattle
                 var coordinateX = rnd.Next(1, 11);
                 var coordinateY = rnd.Next(1, 11);
                 var chosenVectorOfShip = rnd.Next(1, 5);
-                var currentCell = Cells.Single(oneCell => oneCell.X == coordinateX && oneCell.Y == coordinateY);
+                var currentCell = TakeCell(coordinateX, coordinateY);
 
                 switch (chosenVectorOfShip)
                 {
@@ -65,8 +72,7 @@ namespace seaBattle
                             OccupyCell(currentCell, ship);
                             for (var i = 1; i < ship.Length; i++)
                             {
-                                var nextCell = Cells.Single(cell =>
-                                    cell.Y == coordinateY - i && cell.X == coordinateX);
+                                var nextCell = TakeCell(coordinateX, coordinateY - i);
                                 OccupyCell(nextCell, ship);
                             }
 
@@ -80,8 +86,7 @@ namespace seaBattle
                             OccupyCell(currentCell, ship);
                             for (var i = 1; i < ship.Length; i++)
                             {
-                                var nextCell = Cells.Single(cell =>
-                                    cell.Y == coordinateY + i && cell.X == coordinateX);
+                                var nextCell = TakeCell(coordinateX, coordinateY + i);
                                 OccupyCell(nextCell, ship);
                             }
 
@@ -95,8 +100,7 @@ namespace seaBattle
                             OccupyCell(currentCell, ship);
                             for (var i = 1; i < ship.Length; i++)
                             {
-                                var nextCell = Cells.Single(cell =>
-                                    cell.X == coordinateX + i && cell.Y == coordinateY);
+                                var nextCell = TakeCell(coordinateX + i, coordinateY);
                                 OccupyCell(nextCell, ship);
                             }
 
@@ -111,10 +115,10 @@ namespace seaBattle
                             OccupyCell(currentCell, ship);
                             for (var i = 1; i < ship.Length; i++)
                             {
-                                var nextCell = Cells.Single(cell =>
-                                    cell.X == coordinateX - i && cell.Y == coordinateY);
+                                var nextCell = TakeCell(coordinateX - i, coordinateY);
                                 OccupyCell(nextCell, ship);
                             }
+
                             return;
                         }
 
