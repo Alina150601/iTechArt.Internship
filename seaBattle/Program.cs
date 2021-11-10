@@ -4,14 +4,8 @@
     {
         public static void Main(string[] args)
         {
-            PlayGround userPlayGround = new PlayGround();
-            userPlayGround.FillWithShips();
-
-
-            PlayGround computerPlayGround = new PlayGround();
-            computerPlayGround.FillWithShips();
-
+            var userPlayGround = new PlayGround();
+            var computerPlayGround = new PlayGround();
         }
     }
-}
 }

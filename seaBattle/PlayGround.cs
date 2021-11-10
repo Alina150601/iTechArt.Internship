@@ -36,21 +36,18 @@ namespace seaBattle
                 new(1),
                 new(1)
             };
+
+            foreach (var ship in Ships)
+            {
+                LocateShip(ship);
+            }
         }
 
 
         public Cell TakeCell(int x, int y)
         {
-            var single = Cells.Single(oneCell => oneCell.X == x && oneCell.Y == y);
-            return single;
-        }
-
-        public void FillWithShips()
-        {
-            foreach (var ship in Ships)
-            {
-                LocateShip(ship);
-            }
+            var single = Cells.SingleOrDefault(oneCell => oneCell.X == x && oneCell.Y == y);
+            return single; // returns NULL if nothing found (for example coordinates were wrong - <1 or >10)
         }
 
 
@@ -61,70 +58,158 @@ namespace seaBattle
             {
                 var coordinateX = rnd.Next(1, 11);
                 var coordinateY = rnd.Next(1, 11);
-                var chosenVectorOfShip = rnd.Next(1, 5);
-                var currentCell = TakeCell(coordinateX, coordinateY);
-
-                switch (chosenVectorOfShip)
+                var chosenCell = TakeCell(coordinateX, coordinateY);
+                if (!chosenCell.IsAllowed)
                 {
-                    case 1: //up
-                        if (currentCell.Y - 1 >= 1 && currentCell.Y - 2 >= 1 && currentCell.Y - 3 >= 1)
-                        {
-                            OccupyCell(currentCell, ship);
-                            for (var i = 1; i < ship.Length; i++)
-                            {
-                                var nextCell = TakeCell(coordinateX, coordinateY - i);
-                                OccupyCell(nextCell, ship);
-                            }
+                    continue;
+                }
 
-                            return;
-                        }
+                var directions = Enum.GetValues(typeof(Direction));
+                var chosenDirection = (Direction)directions.GetValue(rnd.Next(directions.Length));
 
-                        break;
-                    case 2: //down
-                        if (currentCell.Y + 1 <= 10 && currentCell.Y + 2 <= 10 && currentCell.Y + 3 <= 10)
-                        {
-                            OccupyCell(currentCell, ship);
-                            for (var i = 1; i < ship.Length; i++)
-                            {
-                                var nextCell = TakeCell(coordinateX, coordinateY + i);
-                                OccupyCell(nextCell, ship);
-                            }
-
-                            return;
-                        }
-
-                        break;
-                    case 3: //right
-                        if (currentCell.X + 1 <= 10 && currentCell.X + 2 <= 10 && currentCell.X + 3 <= 10)
-                        {
-                            OccupyCell(currentCell, ship);
-                            for (var i = 1; i < ship.Length; i++)
-                            {
-                                var nextCell = TakeCell(coordinateX + i, coordinateY);
-                                OccupyCell(nextCell, ship);
-                            }
-
-                            return;
-                        }
-
-
-                        break;
-                    case 4: //left
-                        if (currentCell.X - 1 >= 1 && currentCell.X - 2 >= 1 && currentCell.X - 3 >= 1)
-                        {
-                            OccupyCell(currentCell, ship);
-                            for (var i = 1; i < ship.Length; i++)
-                            {
-                                var nextCell = TakeCell(coordinateX - i, coordinateY);
-                                OccupyCell(nextCell, ship);
-                            }
-
-                            return;
-                        }
-
-                        break;
+                if (TryToLocateShip(ship, chosenCell, chosenDirection))
+                {
+                    return;
                 }
             }
+        }
+
+        private bool TryToLocateShip(Ship ship, Cell cell, Direction direction)
+        {
+            switch (direction)
+            {
+                case Direction.Up:
+
+                    var allowedCellsCount = 0;
+                    var cellToCheck = cell;
+                    for (var cellIndex = 0; cellIndex < ship.Length; cellIndex++)
+                    {
+                        if (cellToCheck.IsAllowed)
+                        {
+                            cellToCheck = TakeCell(cell.X, cell.Y - cellIndex);
+                            if (cellToCheck != null)
+                            {
+                                allowedCellsCount++;
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                    }
+
+                    if (allowedCellsCount == ship.Length)
+                    {
+                        OccupyCell(cell, ship);
+                        for (var cellIndex = 0; cellIndex < ship.Length; cellIndex++)
+                        {
+                            var nextCell = TakeCell(cell.X, cell.Y - cellIndex);
+                            OccupyCell(nextCell, ship);
+                        }
+
+                        return true;
+                    }
+
+                    break;
+                case Direction.Down:
+                    allowedCellsCount = 0;
+                    cellToCheck = cell;
+                    for (var cellIndex = 0; cellIndex < ship.Length; cellIndex++)
+                    {
+                        if (cellToCheck.IsAllowed)
+                        {
+                            cellToCheck = TakeCell(cell.X, cell.Y + cellIndex);
+                            if (cellToCheck != null)
+                            {
+                                allowedCellsCount++;
+                            }
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+
+                    if (allowedCellsCount == ship.Length)
+                    {
+                        OccupyCell(cell, ship);
+                        for (var cellIndex = 0; cellIndex < ship.Length; cellIndex++)
+                        {
+                            var nextCell = TakeCell(cell.X, cell.Y - cellIndex);
+                            OccupyCell(nextCell, ship);
+                        }
+
+                        return true;
+                    }
+
+                    break;
+                case Direction.Right:
+                    allowedCellsCount = 0;
+                    cellToCheck = cell;
+                    for (var cellIndex = 0; cellIndex < ship.Length; cellIndex++)
+                    {
+                        if (cellToCheck.IsAllowed)
+                        {
+                            cellToCheck = TakeCell(cell.X + cellIndex, cell.Y);
+                            if (cellToCheck != null)
+                            {
+                                allowedCellsCount++;
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                    }
+
+                    if (allowedCellsCount == ship.Length)
+                    {
+                        OccupyCell(cell, ship);
+                        for (var cellIndex = 0; cellIndex < ship.Length; cellIndex++)
+                        {
+                            var nextCell = TakeCell(cell.X + cellIndex, cell.Y);
+                            OccupyCell(nextCell, ship);
+                        }
+
+                        return true;
+                    }
+
+                    break;
+                case Direction.Left:
+                    allowedCellsCount = 0;
+                    cellToCheck = cell;
+                    for (var cellIndex = 0; cellIndex < ship.Length; cellIndex++)
+                    {
+                        if (cellToCheck.IsAllowed)
+                        {
+                            cellToCheck = TakeCell(cell.X - cellIndex, cell.Y);
+                            if (cellToCheck != null)
+                            {
+                                allowedCellsCount++;
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                    }
+
+                    if (allowedCellsCount == ship.Length)
+                    {
+                        OccupyCell(cell, ship);
+                        for (var cellIndex = 0; cellIndex < ship.Length; cellIndex++)
+                        {
+                            var nextCell = TakeCell(cell.X - cellIndex, cell.Y);
+                            OccupyCell(nextCell, ship);
+                        }
+
+                        return true;
+                    }
+
+                    break;
+            }
+
+            return false;
         }
 
         private void OccupyCell(Cell cell, Ship ship)
