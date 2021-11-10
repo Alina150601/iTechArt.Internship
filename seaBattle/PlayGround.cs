@@ -25,16 +25,16 @@ namespace seaBattle
 
             Ships = new List<Ship>
             {
-                new Ship(1),
-                new Ship(1),
-                new Ship(1),
-                new Ship(1),
-                new Ship(2),
-                new Ship(2),
-                new Ship(2),
-                new Ship(3),
-                new Ship(3),
-                new Ship(4)
+                new(4),
+                new(3),
+                new(3),
+                new(2),
+                new(2),
+                new(2),
+                new(1),
+                new(1),
+                new(1),
+                new(1)
             };
         }
 
