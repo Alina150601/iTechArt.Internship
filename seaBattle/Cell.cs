@@ -12,6 +12,7 @@ namespace seaBattle
         {
             X = x;
             Y = y;
+            IsAllowed = true;
         }
     }
 }
