@@ -8,6 +8,9 @@ namespace seaBattle
 
         public bool IsAllowed { get; set; }
 
+        public bool IsShooted { get; set; }
+
+
         public Cell(int x, int y)
         {
             X = x;

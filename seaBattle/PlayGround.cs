@@ -50,6 +50,11 @@ namespace seaBattle
             return single; // returns NULL if nothing found (for example coordinates were wrong - <1 or >10)
         }
 
+        public void Shoot(int x, int y)
+        {
+            TakeCell(x, y).IsShooted = true;
+        }
+
 
         private void LocateShip(Ship ship)
         {
@@ -123,10 +128,10 @@ namespace seaBattle
                             {
                                 allowedCellsCount++;
                             }
-                        }
-                        else
-                        {
-                            break;
+                            else
+                            {
+                                break;
+                            }
                         }
                     }
 
@@ -135,7 +140,7 @@ namespace seaBattle
                         OccupyCell(cell, ship);
                         for (var cellIndex = 0; cellIndex < ship.Length; cellIndex++)
                         {
-                            var nextCell = TakeCell(cell.X, cell.Y - cellIndex);
+                            var nextCell = TakeCell(cell.X, cell.Y + cellIndex);
                             OccupyCell(nextCell, ship);
                         }
 
