@@ -18,9 +18,6 @@ namespace seaBattle
             Cells = new List<Cell>(length);
         }
 
-        public bool Killed(Ship ship)
-        {
-           return Cells.All(x => x.IsShooted);
-        }
+        public bool IsKilled() => Cells.All(x => x.IsShooted);
     }
 }

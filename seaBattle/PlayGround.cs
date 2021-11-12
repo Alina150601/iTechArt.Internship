@@ -44,15 +44,17 @@ namespace seaBattle
         }
 
 
-        public Cell TakeCell(int x, int y)
-        {
-            var single = Cells.SingleOrDefault(oneCell => oneCell.X == x && oneCell.Y == y);
-            return single; // returns NULL if nothing found (for example coordinates were wrong - <1 or >10)
-        }
+        // returns NULL if nothing found (for example coordinates were wrong - <1 or >10)
+        public Cell TakeCell(int x, int y) => Cells.SingleOrDefault(oneCell => oneCell.X == x && oneCell.Y == y);
 
         public void Shoot(int x, int y)
         {
             TakeCell(x, y).IsShooted = true;
+        }
+
+        public void Shoot(Cell cell)
+        {
+            cell.IsShooted = true;
         }
 
 

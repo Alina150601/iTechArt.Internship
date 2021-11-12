@@ -35,6 +35,7 @@ namespace seaBattle
                         if (success && inputY <= 10 && inputY >= 1)
                         {
                             _computerPlayGround.Shoot(inputX, inputY);
+                            ComputerShoot();
                             break;
                         }
 
@@ -50,10 +51,10 @@ namespace seaBattle
 
         private void ComputerShoot()
         {
-            var freeCells =_userPlayGround.Cells.Where(x => !x.IsShooted).ToList();
+            var freeCells = _userPlayGround.Cells.Where(x => !x.IsShooted).ToList();
             var rnd = new Random();
             var chosenCell = freeCells[rnd.Next(0, freeCells.Count)];
-            //TODO then shoot chosenCell
+            _userPlayGround.Shoot(chosenCell);
         }
     }
 }

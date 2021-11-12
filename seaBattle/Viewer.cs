@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 namespace seaBattle
 {
@@ -29,17 +30,29 @@ namespace seaBattle
             var numberOfCell = 0;
             foreach (var cell in playGround.Cells)
             {
-                if (cell.IsOccupied)
+                if (cell.IsShooted)
                 {
-                    Console.Write(seeShips ? " [X] " : " [ ] ");
-                }
-                else if (cell.IsShooted)
-                {
-                    Console.Write(" [0] ");
+                    if (cell.IsOccupied)
+                    {
+                        var ship = playGround.Ships.Single(s =>
+                            s.Cells.Any(c => c.X.Equals(cell.X) && c.Y.Equals(cell.Y)));
+                        Console.Write(ship.IsKilled() ? " [У] " : " [P] ");
+                    }
+                    else
+                    {
+                        Console.Write(" [O] ");
+                    }
                 }
                 else
                 {
-                    Console.Write(" [ ] ");
+                    if (cell.IsOccupied)
+                    {
+                        Console.Write(seeShips ? " [X] " : " [ ] ");
+                    }
+                    else
+                    {
+                        Console.Write(" [ ] ");
+                    }
                 }
 
                 numberOfCell++;
