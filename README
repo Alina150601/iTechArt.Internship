@@ -1,8 +1,0 @@
-# Инструкция по разворачиванию базы данных
-
-1. Data base -> Data source -> MySQL -> внести данные:
-localhost = @localhost
-database = phonebook
-user = root
-password = 1111
-OK
