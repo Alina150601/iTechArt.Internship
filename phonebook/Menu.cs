@@ -20,6 +20,7 @@ namespace phonebook
             Console.WriteLine("edit <id> name <newname>");
             Console.WriteLine("edit <id> phone <newphone>");
             Console.WriteLine("delete <id>");
+            Console.WriteLine("exit");
             while (true)
             {
                 var command = Console.ReadLine().TrimEnd().Split(" ").ToArray();
@@ -53,7 +54,7 @@ namespace phonebook
                         if (command[2] == "phone")
                         {
                             int.TryParse(command[1], out var idContactToEdit);
-                            var contactToEdit = contacts[idContactToEdit];
+                            var contactToEdit = contacts[idContactToEdit-1];
                             contactToEdit.Phone = command[3];
                             _context.SaveChanges();
                             Console.WriteLine("Contact was edited!");
@@ -61,7 +62,7 @@ namespace phonebook
                         else if (command[2] == "name")
                         {
                             int.TryParse(command[1], out var idContactToEdit);
-                            var contactToEdit = contacts[idContactToEdit];
+                            var contactToEdit = contacts[idContactToEdit-1];
                             contactToEdit.Name = command[3];
                             _context.SaveChanges();
                             Console.WriteLine("Contact was edited!");
@@ -86,7 +87,7 @@ namespace phonebook
                         var secondWordIsNumber = int.TryParse(command[1], out var idContactToDelete);
                         if (secondWordIsNumber)
                         {
-                            var contactToDelete = contacts[idContactToDelete];
+                            var contactToDelete = contacts[idContactToDelete-1];
                             _context.Contacts.Remove(contactToDelete);
                             _context.SaveChanges();
                             Console.WriteLine("Contact was deleted successfully.");
