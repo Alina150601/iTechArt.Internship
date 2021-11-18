@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "30T0u0C02fMYLd8TLocOwdrP2mQ4udUDSqUpsx7QdswPeSKZwhtMR41XRnLpGb6Rttef8VjxITYQjgOCvJ3Vzg==",
+  "success": true,
+  "projectFilePath": "/Users/malinka/iTechArt.Internship/Сompair/Сompair.csproj",
+  "expectedPackageFiles": [
+    "/Users/malinka/.nuget/packages/microsoft.netcore.app.host.osx-x64/5.0.9/microsoft.netcore.app.host.osx-x64.5.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}

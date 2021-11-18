@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "qJgKayb8N1gzXzInbWG6bpyh9/iFRohAG9EXbxsJYIahaaKldOCKLsY0mPQql6HByZ/4mfjjGgiBkRhtMqpgCw==",
+  "success": true,
+  "projectFilePath": "/Users/malinka/iTechArt.Internship/ValidatePassword/ValidatePassword.csproj",
+  "expectedPackageFiles": [
+    "/Users/malinka/.nuget/packages/microsoft.netcore.app.host.osx-x64/5.0.9/microsoft.netcore.app.host.osx-x64.5.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}

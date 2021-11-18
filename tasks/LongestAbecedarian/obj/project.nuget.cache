@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "oEfSwU9M4fO4dgs1g10e/U0JjpQlROT+qff4V3vwUA9xcb96aDy4LZ3M0AlK3vxVgXk66b/pmp9ZYSyp8WPdRQ==",
+  "success": true,
+  "projectFilePath": "/Users/malinka/iTechArt.Internship/LongestAbecedarian/LongestAbecedarian.csproj",
+  "expectedPackageFiles": [
+    "/Users/malinka/.nuget/packages/microsoft.netcore.app.host.osx-x64/5.0.9/microsoft.netcore.app.host.osx-x64.5.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}

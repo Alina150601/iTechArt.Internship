@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "bGhukuYFEKMmQJyJe45INbsdkLj0TXrVwLPxZApVm3mZAuCi2HXIWLvRum6WVy9NdcOJc232c4/KdUJU1e+GRg==",
+  "success": true,
+  "projectFilePath": "/Users/malinka/iTechArt.Internship/ReverseCase/ReverseCase.csproj",
+  "expectedPackageFiles": [
+    "/Users/malinka/.nuget/packages/microsoft.netcore.app.host.osx-x64/5.0.9/microsoft.netcore.app.host.osx-x64.5.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}

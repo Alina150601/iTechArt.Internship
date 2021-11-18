@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "qzlLGbMu2/v99E6D6RwuvgEVaHNrvrHA2I9pnNJ9hDtLVFkExinbwBHs//2wHduiNVNSSUauSjECVFJulcIWIQ==",
+  "success": true,
+  "projectFilePath": "/Users/malinka/iTechArt.Internship/ConsecutiveLetters/ConsecutiveLetters.csproj",
+  "expectedPackageFiles": [
+    "/Users/malinka/.nuget/packages/microsoft.netcore.app.host.osx-x64/5.0.9/microsoft.netcore.app.host.osx-x64.5.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}

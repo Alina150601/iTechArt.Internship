@@ -1,0 +1,16 @@
+/Users/malinka/iTechArt.Internship/LongestAbecedarian/bin/Debug/net5.0/LongestAbecedarian
+/Users/malinka/iTechArt.Internship/LongestAbecedarian/bin/Debug/net5.0/LongestAbecedarian.deps.json
+/Users/malinka/iTechArt.Internship/LongestAbecedarian/bin/Debug/net5.0/LongestAbecedarian.runtimeconfig.json
+/Users/malinka/iTechArt.Internship/LongestAbecedarian/bin/Debug/net5.0/LongestAbecedarian.runtimeconfig.dev.json
+/Users/malinka/iTechArt.Internship/LongestAbecedarian/bin/Debug/net5.0/LongestAbecedarian.dll
+/Users/malinka/iTechArt.Internship/LongestAbecedarian/bin/Debug/net5.0/ref/LongestAbecedarian.dll
+/Users/malinka/iTechArt.Internship/LongestAbecedarian/bin/Debug/net5.0/LongestAbecedarian.pdb
+/Users/malinka/iTechArt.Internship/LongestAbecedarian/obj/Debug/net5.0/LongestAbecedarian.csproj.AssemblyReference.cache
+/Users/malinka/iTechArt.Internship/LongestAbecedarian/obj/Debug/net5.0/LongestAbecedarian.GeneratedMSBuildEditorConfig.editorconfig
+/Users/malinka/iTechArt.Internship/LongestAbecedarian/obj/Debug/net5.0/LongestAbecedarian.AssemblyInfoInputs.cache
+/Users/malinka/iTechArt.Internship/LongestAbecedarian/obj/Debug/net5.0/LongestAbecedarian.AssemblyInfo.cs
+/Users/malinka/iTechArt.Internship/LongestAbecedarian/obj/Debug/net5.0/LongestAbecedarian.csproj.CoreCompileInputs.cache
+/Users/malinka/iTechArt.Internship/LongestAbecedarian/obj/Debug/net5.0/LongestAbecedarian.dll
+/Users/malinka/iTechArt.Internship/LongestAbecedarian/obj/Debug/net5.0/ref/LongestAbecedarian.dll
+/Users/malinka/iTechArt.Internship/LongestAbecedarian/obj/Debug/net5.0/LongestAbecedarian.pdb
+/Users/malinka/iTechArt.Internship/LongestAbecedarian/obj/Debug/net5.0/LongestAbecedarian.genruntimeconfig.cache

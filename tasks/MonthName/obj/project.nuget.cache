@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "TeCur85dJy3SJYujuakJKTsRQzPod5iNhECHyV0CX0nhSXbVNLqBwKjK5+vdmFxvpyCGBmbEPC3RUcugH0m5Cw==",
+  "success": true,
+  "projectFilePath": "/Users/malinka/iTechArt.Internship/MonthName/MonthName.csproj",
+  "expectedPackageFiles": [
+    "/Users/malinka/.nuget/packages/microsoft.netcore.app.host.osx-x64/5.0.9/microsoft.netcore.app.host.osx-x64.5.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}
