@@ -35,7 +35,12 @@ namespace seaBattle
                         if (success && inputY <= 10 && inputY >= 1)
                         {
                             _computerPlayGround.Shoot(inputX, inputY);
-                            ComputerShoot();
+                            var currentCell = _computerPlayGround.TakeCell(inputX, inputY);
+                            if (!currentCell.IsOccupied)
+                            {
+                                ComputerShoot();
+                            }
+
                             break;
                         }
 
