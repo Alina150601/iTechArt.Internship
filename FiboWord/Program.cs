@@ -1,45 +1,47 @@
 ﻿using System;
 
 //link: https://edabit.com/challenge/8JegGd37XazwMJvs6
-public class Program
+namespace FiboWord
 {
-    public static void Main(string[] args)
+    public class Program
     {
-        Console.Write(FiboWord(6));
-    }
-
-    public static string FiboWord(int n)
-    {
-        string first = "b";
-        string second = "a";
-        switch (n)
+        public static void Main(string[] args)
         {
-            case < 2:
-                return "invalid";
-            case 2:
-                return "b, a";
-            default:
-            {
-                n -= 2;
-                string str = string.Empty;
-                str += "b, a, ";
-                do
-                {
-                    string newStr = second + first;
-                    str += newStr;
-                    if (n != 1) str += ", ";
-                    var inMemory = second;
-                    second = newStr;
-                    first = inMemory;
-                    n--;
-                } while (n != 0);
+            Console.Write(FiboWord(6));
+        }
 
-                return str;
+        public static string FiboWord(int n)
+        {
+            string first = "b";
+            string second = "a";
+            switch (n)
+            {
+                case < 2:
+                    return "invalid";
+                case 2:
+                    return "b, a";
+                default:
+                {
+                    n -= 2;
+                    string str = string.Empty;
+                    str += "b, a, ";
+                    do
+                    {
+                        string newStr = second + first;
+                        str += newStr;
+                        if (n != 1) str += ", ";
+                        var inMemory = second;
+                        second = newStr;
+                        first = inMemory;
+                        n--;
+                    } while (n != 0);
+
+                    return str;
+                }
             }
         }
-    }
 
-    /* //Fibonachi with numbers
+        /* //Fibonachi with numbers
     // static void FiboNumber(int n)
     // {
     //     n -= 2;
@@ -55,4 +57,5 @@ public class Program
     //         n--;
     //     } while (n != 0);
      }*/
+    }
 }

@@ -13,8 +13,9 @@ public static class Program
 
     public static void Likes(string[] name)
     {
+        name = name.Where(x => x != string.Empty).ToArray();
         var answer = "";
-        if (name[0] == "")
+        if (!name.Any())
         {
             answer = "no one likes this";
         }
